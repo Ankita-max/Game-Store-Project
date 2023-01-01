@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage admin.master.cs" Inherits="MasterPage_admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body >
+    <form id="form1" runat="server">
+    <div style="background-color:black">
+        <table style="margin:0 auto">
+            <tr style="height:50px; background-color:black">
+                <td style="width:1200px">
+                </td>
+                <td style="text-align:right; width:300px">
+                    <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" >
+                        <Items>
+                            <asp:MenuItem Text="MY PROFILE" Value="MyProfile" NavigateUrl="~/My Profile.aspx"></asp:MenuItem>
+                             <asp:MenuItem Text="LOG OUT" Value="Logout" NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                        </Items>
+                        <StaticHoverStyle ForeColor="Black" BackColor="White" />
+                        <StaticMenuItemStyle ForeColor="Gray" Font-Size="Small" HorizontalPadding="20px"/>
+                        <StaticSelectedStyle ForeColor="Black" BackColor="White"/>
+                    </asp:Menu>
+                </td>
+            </tr>
+            </table>
+        </div>
+        <div style="background-color:yellow">
+        <table style="margin:0 auto">
+            <tr style="height:100px; background-color:yellow">
+                <td style="width:1300px">
+                    <asp:Menu ID="Menu2" runat="server" Orientation="Horizontal" >
+                        <Items>
+                            <asp:MenuItem Text="PRODUCTS" Value="Products" NavigateUrl="~/Items.aspx"></asp:MenuItem>
+                             <asp:MenuItem Text="CATEGORIES" Value="Categories" NavigateUrl="~/Category.aspx"></asp:MenuItem>
+                            
+                            <asp:MenuItem Text="ORDERS" Value="Orders" NavigateUrl="~/Orders.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="FEEDBACK" Value="Feedback" NavigateUrl="~/Feedback_admin.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="ADD PRODUCT" Value="AddProduct" NavigateUrl="~/Add Items.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="ADD CATEGORY" Value="AddCategory" NavigateUrl="~/Add Category.aspx"></asp:MenuItem>
+                            
+          
+                        </Items>
+                        <StaticHoverStyle ForeColor="Black" BackColor="White" />
+                        <StaticMenuItemStyle ForeColor="Black" Font-Size="Medium" HorizontalPadding="20px" />
+                        <StaticSelectedStyle ForeColor="Black" BackColor="White"/>
+                    </asp:Menu>   
+                </td>
+                <td style="width:200px">
+                </td>
+            </tr>
+            </table>
+            </div>
+        <div style="background-image:url(https://i.pinimg.com/originals/f3/33/39/f33339f6322b8898c5ff7e00d357dc3a.jpg)">
+
+        
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        <div style="background-color:black">
+            <table style="margin:0 auto">
+                <tr style="background-color:black; height:100px">
+                <td style="width:1300px">
+                    <asp:Menu ID="Menu3" runat="server" Orientation="Horizontal"  >
+                        <Items>
+                            <asp:MenuItem Text="Privacy Policy" Value="Privacy Policy" NavigateUrl="~/Privacy Policy.aspx"></asp:MenuItem>
+                             <asp:MenuItem Text="Terms & Conditions" Value="Terms & Conditions" NavigateUrl="~/Terms & Conditions.aspx"></asp:MenuItem>
+                             <asp:MenuItem Text="Affiliates" Value="Affiliates" NavigateUrl="~/Affiliates.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Newsletters" Value="Newsletters" NavigateUrl="~/Newsletters.aspx"></asp:MenuItem>
+                        </Items>
+                        <StaticHoverStyle ForeColor="White" BackColor="Black"  />
+                        <StaticMenuItemStyle ForeColor="White" Font-Size="Medium" HorizontalPadding="20px"/>
+                        <StaticSelectedStyle ForeColor="White" BackColor="Black"/>
+                    </asp:Menu>
+                </td>
+                <td style="text-align:right; width:200px">
+                    <asp:ImageButton ID="Imagebutton2" runat="server" PostBackUrl="" ImageUrl="~/Images/facebook.png" width="30px" Height="20px" />
+                    &nbsp;
+                    &nbsp;
+                    <asp:ImageButton ID="Imagebutton3" runat="server" PostBackUrl="" ImageUrl="~/Images/twitter.jpg" width="30px" Height="20px" />
+                     &nbsp;
+                    &nbsp;
+                    <asp:ImageButton ID="Imagebutton4" runat="server" PostBackUrl="" ImageUrl="~/Images/instagram.png" width="30px" Height="20px" />
+                </td>
+            </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
